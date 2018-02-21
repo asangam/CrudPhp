@@ -2,6 +2,7 @@ body
 {
 	background: url(../img/bg.jpg)  no-repeat center center fixed;
 	background-size: cover;
+	margin: 0;
 
 }
 
@@ -70,4 +71,15 @@ input[type="text"],[type="password"]
 form a
 {
 	color: white;
+}
+
+a.navbar-brand
+{
+	
+}
+
+nav a img
+{
+	height: 65px;
+	width: 105px;
 }
