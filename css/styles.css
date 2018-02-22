@@ -26,7 +26,7 @@ body
 	margin-top: -60px;
 	margin-bottom: 30px;
 }
-input[type="text"],[type="password"]
+input[type="text"],[type="password"],[type="email"]
 {
 	height: 45px;
 	width: 300px;
