@@ -47,40 +47,44 @@
         <th>Operation</th>
       </tr>
     </thead>
+  
+        <?php 
+
+  $con=mysqli_connect("localhost","root","","crudphp");
+
+  //checking the connection
+  if(mysqli_connect_errno())
+      {
+        echo "Unable to connect to the database : " .mysqli_connect_error();
+      }
+
+    $query="select * from developerdetails";
+    $run=mysqli_query($con,$query);
+    while($row=mysqli_fetch_array($run))
+      {
+        $id=$row['id'];
+        $firstName=$row['firstName'];
+        $lastName=$row['LastName'];
+        $email=$row['email'];
+      
+      
+?>
+
     <tbody>
       <tr>
-        <td>Sangam</td>
-        <td>Adhikari</td>
-        <td>asangam@asangam.com.np</td>
+        <td><?php echo $firstName; ?></td>
+        <td><?php echo $lastName; ?></td>
+        <td><?php echo $email; ?></td>
         <td>
           <a href="#" class="badge badge-primary">Read</a>
           <a href="#" class="badge badge-success">Update</a>
           <a href="#" class="badge badge-danger">Delete</a>
         </td>
       </tr>
-      <tr>
-        <td>Kedar</td>
-        <td>Giri</td>
-        <td>kedar@example.com</td>
-        <td>
-          <a href="#" class="badge badge-primary">Read</a>
-          <a href="#" class="badge badge-success">Update</a>
-          <a href="#" class="badge badge-danger">Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Sushant</td>
-        <td>Dhakal</td>
-        <td>sushant@example.com</td>
-        <td>
-          <a href="#" class="badge badge-primary">Read</a>
-          <a href="#" class="badge badge-success">Update</a>
-          <a href="#" class="badge badge-danger">Delete</a>
-        </td>
-      </tr>
-      <tr></tr>
     </tbody>
+    <?php } ?>
   </table>
     </div>
 </body>
 </html>
+
