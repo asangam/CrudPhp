@@ -112,3 +112,8 @@ nav a img
 {
 	width: 300px !important;
 }
+
+.no-container {
+  
+    margin-right: 0 !important; 
+}
