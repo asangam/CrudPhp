@@ -78,7 +78,7 @@
         <td>
           <a href="#" class="badge badge-primary">Read</a>
           <a href="update.php?updateid=<?php echo $id;?>" class="badge badge-success">Update</a>
-          <a href="#" class="badge badge-danger">Delete</a>
+          <a href="delete.php?deleteid=<?php echo $id; ?>" class="badge badge-danger">Delete</a>
         </td>
       </tr>
     </tbody>
