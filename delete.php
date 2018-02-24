@@ -19,7 +19,7 @@
 
     else
       {
-        echo "Unable to Update the details";
+        echo "Unable to Delete the details";
       }
 
 

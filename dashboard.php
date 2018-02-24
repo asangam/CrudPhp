@@ -78,13 +78,30 @@
         <td>
           <a href="#" class="badge badge-primary">Read</a>
           <a href="update.php?updateid=<?php echo $id;?>" class="badge badge-success">Update</a>
-          <a href="delete.php?deleteid=<?php echo $id; ?>" class="badge badge-danger">Delete</a>
+          <a href="delete.php?deleteid=<?php echo $id; ?>" class="badge badge-danger delme" data-confirm="Are you sure to delete this item?">Delete</a>
         </td>
       </tr>
     </tbody>
     <?php } ?>
   </table>
     </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <script>
+
+    $('.delme').on("click", function (e) 
+    {
+      e.preventDefault();
+
+      var choice = confirm($(this).attr('data-confirm'));
+
+      if (choice)
+       {
+        window.location.href = $(this).attr('href');
+       }
+    });
+
+    </script>
 </body>
 </html>
 
