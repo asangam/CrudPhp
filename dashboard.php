@@ -76,7 +76,7 @@
         <td><?php echo $lastName; ?></td>
         <td><?php echo $email; ?></td>
         <td>
-          <a href="#" class="badge badge-primary">Read</a>
+          <a href="devdetails.php?devdetails=<?php echo $id;?>" class="badge badge-primary">Read</a>
           <a href="update.php?updateid=<?php echo $id;?>" class="badge badge-success">Update</a>
           <a href="delete.php?deleteid=<?php echo $id; ?>" class="badge badge-danger delme" data-confirm="Are you sure you want to delete this item?">Delete</a>
         </td>
