@@ -78,7 +78,7 @@
         <td>
           <a href="#" class="badge badge-primary">Read</a>
           <a href="update.php?updateid=<?php echo $id;?>" class="badge badge-success">Update</a>
-          <a href="delete.php?deleteid=<?php echo $id; ?>" class="badge badge-danger delme" data-confirm="Are you sure to delete this item?">Delete</a>
+          <a href="delete.php?deleteid=<?php echo $id; ?>" class="badge badge-danger delme" data-confirm="Are you sure you want to delete this item?">Delete</a>
         </td>
       </tr>
     </tbody>
@@ -89,7 +89,7 @@
   <script src="js/bootstrap.min.js"></script>
     <script>
 
-    $('.delme').on("click", function (e) 
+    $('A[data-confirm]').on("click", function (e) 
     {
       e.preventDefault();
 
