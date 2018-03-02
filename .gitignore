@@ -1,1 +1,1 @@
-.vscode/* #ignores the Vs Code Json files
+/.vscode/ #ignores the Vs Code Json files
