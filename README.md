@@ -11,4 +11,6 @@ Project demo[Only html files] can be accessed at https://asangam.github.io/CrudP
 - Run your nginx or apache server and mysql
 - Run command ```$ php -S localhost:8081```
 - And now enter ```http://localhost:8081``` to web browser
+- Enter 'admin' for both username and password, it is a Js Client side validation
+only used for testing purpose.
 - Have Fun 
