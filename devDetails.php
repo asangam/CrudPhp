@@ -1,27 +1,23 @@
-  <?php 
+<?php
+$con=mysqli_connect("localhost","root","","crudphp");
+//checking the connection
+if(mysqli_connect_errno())
+{
+echo "Unable to connect to the database : " .mysqli_connect_error();
+}
+$read_details=$_GET['devdetails'];
+$query="select * from developerdetails where id='$read_details'";
+$run=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($run))
+{
+$update_id=$row['id'];
+$firstName=$row['firstName'];
+$lastName=$row['LastName'];
+$email=$row['email'];
+}
 
-  $con=mysqli_connect("localhost","root","","crudphp");
 
-  //checking the connection
-  if(mysqli_connect_errno())
-      {
-        echo "Unable to connect to the database : " .mysqli_connect_error();
-      }
-
-    $read_details=$_GET['devdetails'];
-    $query="select * from developerdetails where id='$read_details'";
-    $run=mysqli_query($con,$query);
-    while($row=mysqli_fetch_array($run))
-      {
-        $update_id=$row['id'];
-        $firstName=$row['firstName'];
-        $lastName=$row['LastName'];
-        $email=$row['email'];
-      }
-      
-      
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -58,13 +54,12 @@
         
         <h1 class="dashboard-title">Dev Details</h1>
         
-       <div class="container_fluid">
-         <p class="data">Hi! <br>
-          My name is <b><?php echo $firstName; echo' '; echo $lastName;?></b>. My employee id is <b><?php echo $update_id; ?></b>. You can contact me at
-          <a href="mailto:"><b><?php echo $email; ?></b></a>.
-           </p>
-
-       </div>
+        <div class="container_fluid">
+          <p class="data">Hi! <br>
+            My name is <b><?php echo $firstName; echo' '; echo $lastName;?></b>. My employee id is <b><?php echo $update_id; ?></b>. You can contact me at
+            <a href="mailto:"><b><?php echo $email; ?></b></a>.
+          </p>
+        </div>
         
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
