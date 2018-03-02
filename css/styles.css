@@ -1,0 +1,118 @@
+body
+{
+background: url(../img/bg.jpg)  no-repeat center center fixed;
+background-size: cover;
+
+}
+.index
+{
+width: 500px;
+height: 400px;
+text-align: center;
+margin: 0 auto;
+background-color: rgba(52,73,94,0.7);
+opacity: 0.7;
+margin-top: 150px;
+border-radius: 14px;
+}
+.index img
+{
+/*opacity: 88;*/
+height: 120px;
+width: 120px;
+margin-top: -60px;
+margin-bottom: 30px;
+}
+input[type="text"],[type="password"],[type="email"]
+{
+height: 45px;
+width: 300px;
+font-size: 18px;
+margin-bottom: 18px;
+border-radius: 4px;
+border: none;
+background-color: #fff;
+padding-left: 40px;
+}
+.form-input::before
+{
+content: "\f007";
+position: absolute;
+font-family: "FontAwesome";
+font-size:28px;
+color: #03A9F4;
+padding-left: 5px;
+padding-top: 5px;
+
+}
+.form-input:nth-child(2)::before
+{
+content: "\f023";
+}
+.btn-login
+{
+padding:5px 30px;
+width: 300px;
+color: #fff;
+cursor: pointer;
+border:none;
+border-radius: 4px;
+border-bottom: 4px solid #34ef60;
+background-color: #2ecc71;
+margin-bottom: 20px;
+}
+form a
+{
+color: white;
+}
+.container-fluid
+{
+padding: 0px;
+}
+nav a img
+{
+height: 65px;
+width: 105px;
+}
+.dashboard-title
+{
+margin-top: 45px;
+margin-left: 45px;
+margin-bottom: 45px;
+}
+.data
+{
+padding-left: 45px;
+}
+
+.form-group
+{
+padding-left: 45px;
+}
+.fixbtn
+{
+margin-left: 45px;
+}
+.form-control
+{
+width: 300px !important;
+}
+.no-container {
+
+margin-right: 0 !important;
+}
+.alert-custom
+{
+
+	display: inline-block;
+	margin-left: 45px;
+}
+.displayelse
+/*{
+	display: none;
+}*/
+.tresspassing
+{
+	height:35px;
+	width:35Px;
+}
