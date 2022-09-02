@@ -1,26 +1,15 @@
-<?php 
-	
-	  $con=mysqli_connect("localhost","root","","crudphp");
+<?php
 
-	  //checking the connection
-  	  if(mysqli_connect_errno())
-      {
-        echo "Unable to connect to the database : " .mysqli_connect_error();
-      }
-
-      $delete_id=$_GET['deleteid'];
-      $query= "delete from developerdetails where id='$delete_id'";
-
-      if(mysqli_query($con,$query))
-      {
-        echo "<script>alert('Details Deleted')</script>";
-        echo "<script>location.href='dashboard.php'</script>";
-      }
-
-    else
-      {
-        echo "Unable to Delete the details";
-      }
+include "./app/connection.php";
+include "./app/helpers.php";
 
 
- ?>
+$delete_id = filter($_GET['deleteid']);
+$query = $pdo->prepare("DELETE FROM developerdetails WHERE id = ?");
+$query->bindParam(1, $delete_id);
+if ($query->execute()) {
+  echo "<script>alert('Details Deleted')</script>";
+  echo "<script>location.href='dashboard.php'</script>";
+} else {
+  echo "Unable to Delete the details";
+}
